@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name - Your Store</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">Your Store</a>
+            <input type="text" placeholder="Search..." class="search-bar">
+            <a href="/cart">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">
+            <a href="/electronics">Electronics</a> > 
+            <a href="/sensors">Sensors</a> > 
+            <span>Product Name</span>
+        </div>
+
+        <section class="product-details">
+            <div class="product-gallery">
+                <img id="main-image" src="product-main.jpg" alt="Main Product Image">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumb-1.jpg" alt="View 1" onclick="changeImage('thumb-1.jpg')">
+                    <img class="thumbnail" src="thumb-2.jpg" alt="View 2" onclick="changeImage('thumb-2.jpg')">
+                </div>
+            </div>
+
+            <div class="product-info">
+                <h1 id="product-name">High Precision Stepper Motor - NEMA 17</h1>
+                <p class="sku">SKU: NEMA17-P01 | In Stock</p>
+                
+                <div class="pricing">
+                    <span id="product-price" class="price">₹ 950.00</span> 
+                    <span class="tax-info">(Incl. of all taxes)</span>
+                </div>
+                
+                <div class="actions">
+                    <label for="quantity">Qty:</label>
+                    <input type="number" id="quantity" value="1" min="1" max="50">
+                    <button id="add-to-cart-btn" class="btn primary-btn">Add to Cart</button>
+                    <button class="btn secondary-btn">Buy Now</button>
+                </div>
+
+                <div class="short-description">
+                    <h2>Quick Overview</h2>
+                    <p>A standard NEMA 17 stepper motor, ideal for 3D printers, CNC machines, and custom robotic projects. High torque and reliability guaranteed.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tabs">
+            <div class="tab-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specs">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews (45)</button>
+            </div>
+            
+            <div id="description" class="tab-content active">
+                <p>Detailed overview of the motor's applications, materials, and features...</p>
+            </div>
+            
+            <div id="specs" class="tab-content">
+                <table class="specs-table">
+                    <tr><th>Parameter</th><th>Value</th></tr>
+                    <tr><td>Step Angle</td><td>1.8 degrees</td></tr>
+                    <tr><td>Rated Voltage</td><td>12V</td></tr>
+                    <tr><td>Holding Torque</td><td>5 kg-cm</td></tr>
+                </table>
+            </div>
+            
+            <div id="reviews" class="tab-content">
+                <p>User ratings and reviews section...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>
